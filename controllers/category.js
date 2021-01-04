@@ -2,8 +2,8 @@ const Category=require("../models/category")
 const slugify=require("slugify")
 
 exports.create=(req,res)=>{
+    console.log("create called")
     const name=req.body.name
-
     const category=new Category({
         name,
         slug:slugify(name)

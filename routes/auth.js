@@ -8,7 +8,7 @@ router.post("/create-or-update-user",authCheck,createOrUpdateUser)
 
 router.post("/get-user",authCheck,getUser)
 
-router.post("/get-admin", authAdminCheck);
+router.post("/get-admin",authCheck, authAdminCheck,getUser);
 
 // middelwares testing
 router.get("/testing",authCheck,(req,res)=>{

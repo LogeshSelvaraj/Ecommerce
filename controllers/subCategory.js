@@ -9,6 +9,7 @@ exports.create=(req,res)=>{
         slug:slugify(name),
         category:parentObjectId
     })
+    
     subcategory.save((err)=>{
         if(!err){
             res.json(subcategory)

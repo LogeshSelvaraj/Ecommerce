@@ -24,9 +24,6 @@ exports.getUser=async (req,res)=>{
         if(founduser){
             res.json(founduser)
         }
-        // else{
-        //     throw new Error(err)
-        // }
     })
 
 }
