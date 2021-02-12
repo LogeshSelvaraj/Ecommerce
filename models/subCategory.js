@@ -12,12 +12,10 @@ const SubCategorySchema = new mongoose.Schema(
     },
     slug: {
       type: String,
-      unique: true,
-      lowercase: true,
-      index: true,
+      lowercase: true
     },category:{
         type:ObjectId,
-        required:"parent category is required"
+        required:"parent category is required",
     }
   },
   { timestamps: true }

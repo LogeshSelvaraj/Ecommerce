@@ -1,5 +1,4 @@
 const mongoose=require("mongoose")
-const {Types:{ObjectId}}=mongoose.Schema
 
 const CategorySchema=new mongoose.Schema({
     name:{

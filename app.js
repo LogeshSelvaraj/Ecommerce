@@ -10,7 +10,7 @@ const app=express()
 
 // connecting  database
 mongoose
-  .connect(process.env.MONGODB_LOCAL_HOST, {
+  .connect(process.env.MONGODB_ATLAS_CONNECTION_URL, {
     useFindAndModify: false,
     useCreateIndex: true,
     useNewUrlParser: true,

@@ -1,10 +1,7 @@
 const mongooose=require("mongoose")
 const {Types:{ObjectId}} =mongooose.Schema
-const fs=require("fs")
 
-function arrayLimit(val){
-    return val.length>5
-}
+
 
 const Product=new mongooose.Schema({
     title:{
@@ -20,26 +17,25 @@ const Product=new mongooose.Schema({
         type:String,
         required:true,
         minlength:30,
-        maxlength:250
+        maxlength:1000
     },specs:{
         type:[{
-            type:String
+            name:String,
+            detail:String
         }],
-        validate:[arrayLimit,"minimum specs required"]
     },price:{
         type:Number,
-        require:true
+        require:true,
+        ref:"category"
     },category:{
         type:ObjectId,
-        require:true
+        require:true,
+        ref:"subCategory"
     },subcategory:{
         type:ObjectId,
         require:true
     },images:{
-        type:[{
-            data:Buffer,
-            contentType:String
-        }]
+       type:Array
     },rating:{
         star:Number,
         default:0
@@ -51,8 +47,11 @@ const Product=new mongooose.Schema({
         type:Number
     },sold:{
         type:Number
+    },brand:{
+        type:String,
+        required:true
     }
     
-})
+},{timestamps:true})
 
-modules.export=mongooose.model("product",Product)
+module.exports=mongooose.model("product",Product)

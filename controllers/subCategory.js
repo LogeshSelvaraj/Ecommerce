@@ -1,4 +1,4 @@
-const SubCategory=require("../models/subCategories")
+const SubCategory=require("../models/subCategory")
 const slugify=require("slugify")
 
 exports.create=(req,res)=>{
