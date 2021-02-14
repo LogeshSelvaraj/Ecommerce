@@ -26,14 +26,15 @@ const Product=new mongooose.Schema({
     },price:{
         type:Number,
         require:true,
-        ref:"category"
+        
     },category:{
         type:ObjectId,
         require:true,
-        ref:"subCategory"
+        ref:"category"
     },subcategory:{
         type:ObjectId,
-        require:true
+        require:true,
+        ref:"subcategory"
     },images:{
        type:Array
     },rating:{

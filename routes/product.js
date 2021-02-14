@@ -5,11 +5,14 @@ const router = express.Router();
 const { authCheck, authAdminCheck } = require("../middlewares/auth");
 
 // controller
-const {create,listAll} =require("../controllers/product")
+const {create,listAll,remove,update,read} =require("../controllers/product");
 
 // routes
 router.post("/product",authCheck,authAdminCheck,create)
-router.get("/products/:count",listAll)
+router.get("/product/:_id",read)
+router.get("/products-newarrivals/:count",listAll)
+router.delete("/product/:_id",remove)
+router.put("/product",authCheck,authAdminCheck,update)
 
 
 module.exports = router;
