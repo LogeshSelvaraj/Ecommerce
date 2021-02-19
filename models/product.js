@@ -37,12 +37,13 @@ const Product=new mongooose.Schema({
         ref:"subcategory"
     },images:{
        type:Array
-    },rating:{
-        star:Number,
-        default:0
-    },reviews:{
+    },ratings:{
         type:[{
-            type:String
+            star:Number,
+            postedBy:{
+                type:ObjectId,
+                ref:"User"
+            }
         }],
     },stock:{
         type:Number
