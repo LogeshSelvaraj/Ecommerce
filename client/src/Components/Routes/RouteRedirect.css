@@ -1,0 +1,7 @@
+.loading-animation {
+    height: 500px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

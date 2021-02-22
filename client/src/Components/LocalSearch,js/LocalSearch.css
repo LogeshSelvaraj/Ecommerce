@@ -1,0 +1,12 @@
+.input-box {
+    border: none;
+    width: 90%;
+}
+
+.input-box:focus {
+    outline: none !important;
+}
+
+.search-box {
+    border: 2px black solid;
+}

@@ -1,0 +1,31 @@
+.navbar-icon-title {
+    color: white;
+}
+
+.coloring {
+    color: white;
+}
+
+.navbar-myicon {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.navbar-icon-title {
+    margin-left: 4px;
+    padding-top: 3px;
+    /* color: white; */
+}
+
+.nav-item :hover {
+    background: linear-gradient(to right, #006a7b, #4d8ee4);
+}
+
+.dropdown a:hover {
+    background: none;
+    color: white;
+}
+
+.category-icon .MuiSvgIcon-root {
+    padding-bottom: 3px;
+}

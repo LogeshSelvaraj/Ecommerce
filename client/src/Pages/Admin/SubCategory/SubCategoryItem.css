@@ -1,0 +1,29 @@
+.category-item-box {
+    background-color: #EFF3C6;
+    padding: 10px 5px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.category-item-box .content-1 {
+    flex: 3;
+    font-weight: 500;
+}
+
+.category-item-box .content-2 {
+    flex: 1;
+}
+
+.category-item-box .content-1 .parent-name {
+    width: fit-content;
+}
+
+.category-item-box .button-2 {
+    color: rgb(248, 62, 62);
+}
+
+@media(min-width:800px) {
+    .category-item-box .content-1 .sub-name {
+        padding-left: 150px;
+    }
+}

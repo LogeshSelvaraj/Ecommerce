@@ -1,0 +1,25 @@
+.allignment-form2 {
+    width: 400px;
+    padding-top: 100px;
+    margin: auto;
+}
+
+.loading-animation {
+    height: 500px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.oauth-button {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.allignment-form {
+    width: 400px;
+    padding-top: 100px;
+    margin: auto;
+}
