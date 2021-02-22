@@ -29,7 +29,7 @@ const AllProducts = () => {
     <>
       <h1 className="heading-2 text-center mt-5">All Prodcuts</h1>
       <div className="row w-100 products">
-        {products && products.map((flag) => <ProductCard key={flag._id} product={flag} />)}
+        {products &&products.length&& products.map((flag) => <ProductCard key={flag._id} product={flag} />)}
       </div>
       <br />
       <div className="row w-100">

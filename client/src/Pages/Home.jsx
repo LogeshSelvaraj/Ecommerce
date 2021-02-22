@@ -40,7 +40,7 @@ const Home = () => {
             New Arrivals!
           </h1>
           <div className="row w-100 products">
-            {products &&
+            {products &&products.length&&
               products.map((product) => <ProductCard key={product._id} product={product} />)}
           </div>
               <FlagshipProducts />

@@ -28,7 +28,7 @@ const FlagshipProducts = () => {
             Flagship Smartphones
           </h1>
           <div className="row w-100 products">
-            {flagship && flagship.map((flag) => <ProductCard key={flag._id} product={flag} />)}
+            {flagship &&flagship.length&& flagship.map((flag) => <ProductCard key={flag._id} product={flag} />)}
           </div>
           <br/>
           <div className="row w-100">
