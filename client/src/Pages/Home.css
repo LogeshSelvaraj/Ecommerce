@@ -1,14 +1,15 @@
 .banner {
-    background-color: #a1cae2;
     font-family: 'Merriweather Sans', sans-serif;
     font-size: 4.5vw;
     text-align: center;
+    background-color: black;
+    color: white;
+    opacity: 0.9;
     padding: 5vh 0;
 }
 
 .heading-1,
 .heading-2 {
-    background-color: #a1cae2;
     padding: 20px 0;
     font-family: 'Merriweather Sans', sans-serif;
 }
@@ -42,4 +43,12 @@
     .heading-2 {
         font-size: 1.5rem;
     }
+}
+
+.heading-underline {
+    background-color: black;
+    border-radius: 5px;
+    width: 20%;
+    height: 2px;
+    margin: 10px auto 70px;
 }

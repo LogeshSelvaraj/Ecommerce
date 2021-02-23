@@ -43,7 +43,9 @@ const Home = () => {
             {products &&products.length&&
               products.map((product) => <ProductCard key={product._id} product={product} />)}
           </div>
+          <hr className="heading-underline"/>
               <FlagshipProducts />
+              <hr className="heading-underline"/>
               <AllProducts/>
         </>
       )}

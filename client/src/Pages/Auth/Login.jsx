@@ -100,21 +100,6 @@ const Login = ({ history }) => {
         .catch((err) => console.log(err));
         })
 
-        // console.log(props);
-
-        
-
-        // dispatch(userState(props));
-
-        // dispatch({
-        //   type:"LOGIN_USER",
-        //   payload:{
-        //     user:result.user.email,
-        //     token:result.user.getIdToken()
-        //   }
-        // })
-     
-      
       .catch((err) => {
         console.log(err);
         toast.error(err.message);
@@ -191,9 +176,9 @@ const Login = ({ history }) => {
                     </i>
                   </div>
 
-                  <p>
-                    <a href="/forgot/password">Forgot password?</a> Not
-                    registered? <a href="/register">Sign up here</a>
+                  <p className="text-center">
+                    <a href="/forgot/password">Forgot password?</a><span  className="pl-2"> Not
+                    registered? </span><a href="/register">Sign up here</a>
                   </p>
                 </form>
               </div>

@@ -17,9 +17,10 @@
     /* color: white; */
 }
 
-.nav-item :hover {
+
+/* .nav-item :hover {
     background: linear-gradient(to right, #006a7b, #4d8ee4);
-}
+} */
 
 .dropdown a:hover {
     background: none;
@@ -28,4 +29,8 @@
 
 .category-icon .MuiSvgIcon-root {
     padding-bottom: 3px;
+}
+
+.dropdown-toggle::after {
+    color: white;
 }
