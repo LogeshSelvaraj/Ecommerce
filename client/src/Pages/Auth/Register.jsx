@@ -22,7 +22,7 @@ const Register = ({history}) => {
     e.preventDefault();
 
     const config = {
-      url: `${window.location.hostname}/login`,
+      url: process.env.REACT_APP_REGISTER_REDIRECT_PATH,
       handleCodeInApp: true,
     };
 
