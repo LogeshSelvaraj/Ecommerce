@@ -1,10 +1,10 @@
 .product-grid {
+    background-color: white;
     width: 80%;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    border: 1px solid #e7e7e7;
-    border-width: 5px;
-    border-radius: 10px;
+    border: 1px solid rgb(209, 208, 208);
+    border-radius: 8px;
 }
 
 .product-grid .product-image {
@@ -96,8 +96,8 @@
     text-transform: capitalize;
     padding: 0 10px 14px;
     margin: 0 0 7px;
-    border-bottom: 1px solid #dfe5e9;
-    border-width: 5px;
+    border-bottom: 1px solid rgb(209, 208, 208);
+    border-width: 1px;
 }
 
 .product-grid .title a {
@@ -110,8 +110,8 @@
 }
 
 .product-grid .price {
-    color: #1abc9c;
-    font-size: 20px;
+    color: black;
+    font-size: 16px;
     font-weight: 400;
     animation: color-animate 5s infinite linear;
 }

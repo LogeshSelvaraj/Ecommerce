@@ -1,35 +1,76 @@
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
+import {useHistory} from 'react-router';
 import CategoryIcon from "@material-ui/icons/Category";
-import {getCategories} from '../../functions/CategoryApi'
-import {getSubs} from '../../functions/SubCategory'
+import { getCategories } from "../../functions/CategoryApi";
+import { getSubs } from "../../functions/SubCategory";
+import "./Category.css"
 
 const Category = () => {
+  const [categories, setCategories] = useState();
+  const [subs, setSubs] = useState();
+  const history=useHistory()
 
-  const [categories,setCategories]=useState()
-  const [subs,setSubs]=useState()
+  useEffect(() => {
+    loadCategories();
+  }, []);
 
-  useEffect(()=>{
-    loadCategories()
-  },[])
+  const loadCategories = () => {
+    getCategories().then((res) => {
+      setCategories(res.data);
+    });
+    getSubs().then((res) => {
+      setSubs(res.data);
+    });
+  };
+
+  const checkForSubs = (c) => {
+    let count = 0;
+    subs.map((s) => {
+      s.category === c._id && count++;
+    });
+    if (count > 0) {
+      const match = subs.filter((s) => s.category === c._id);
+      return (
+        <>
+          <li  className="dropdown-submenu" >
+            <a id={c._id} className="dropdown-item" tabIndex="-1" onClick={handleCategory} href="#">{c.name}</a>
+            <ul className="dropdown-menu">
+              {match.map((m) =>{
+                return (
+                  <li >
+                   <a  id={m._id} onClick={handleSubs} href="#" className="dropdown-item"> {m.name}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          </li>
+        </>
+      );
+    }
+    return <li ><a id={c._id} className="dropdown-item" onClick={handleCategory} href="#">{c.name}</a></li>
+  };
 
 
-  const loadCategories=()=>{
-      getCategories().then((res)=>{
-        setCategories(res.data)
-      })
-      getSubs().then(res=>{
-        setSubs(res.data)
-      })
+  const handleCategory=(e)=>{
+    e.preventDefault()
+    const cat=categories.filter(c=>c._id===e.target.id)
+    console.log(cat)
+    history.push(`/category/${e.target.id}/${cat[0].name}`)
   }
 
- 
+  const handleSubs=(e)=>{
+    e.preventDefault()
+    const cat=subs.filter(c=>c._id===e.target.id)
+    console.log(cat)
+    history.push(`/subcategory/${e.target.id}/${cat[0].name}`)
+  }
 
   return (
     <li className="nav-item active ">
       <a className="nav-link navbar-myicon" href="/">
-        <div class="dropdown">
+        <div className="dropdown">
           <button
-            class="btn dropdown-toggle p-0 border-0"
+            className="btn dropdown-toggle p-0 border-0"
             type="button"
             id="dropdownMenuButton"
             data-toggle="dropdown"
@@ -41,14 +82,12 @@ const Category = () => {
               <span className="navbar-icon-title">Categories</span>
             </span>
           </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          {categories&&categories.length&&categories.map(c=>{
-            return   <span id={c._id} class="dropdown-item" >
-                  {c.name}
-            </span>
-          })}
-          
-        
+          <div className="dropdown-menu multi-level" aria-labelledby="dropdownMenuButton">
+            {categories &&
+              categories.length &&
+              categories.map((c) => {
+                return subs && subs.length && checkForSubs(c);
+              })}
           </div>
         </div>
       </a>

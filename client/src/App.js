@@ -19,6 +19,8 @@ import SubCategory from './Pages/Admin/SubCategory/SubCategory'
 import UpdatePage from './Pages/Admin/Product/UpdatePage'
 import  CreatePage from "./Pages/Admin/Product/CreatePage"
 import SingleProduct from "./Components/Product/SingleProduct"
+import CategoryPage from './Components/Home/Category'
+import SubCategoryPage from './Components/Home/SubCategory'
 import Favicon from 'react-favicon';
 
 
@@ -41,6 +43,8 @@ function App({history}) {
         <Route exact path="/register/complete" component={RegisterComplete} />
         <Route exact path="/forgot/password" component={ForgotPassword} />
         <Route exact path="/product/:id" component={SingleProduct} />
+        <Route exact path="/category/:id/:name" component={CategoryPage}/>
+        <Route exact path="/subcategory/:id/:name" component={SubCategoryPage}/>
         <UserRoute exact path="/user/history" component={UserHistory} />
         <UserRoute exact path="/user/myorders" component={MyOrders} />
         <AdminRoute exact path="/admin/dashboard" component={AdminDashBoard}> </AdminRoute>

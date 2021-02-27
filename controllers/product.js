@@ -230,3 +230,24 @@ exports.relatedProducts=async(req,res)=>{
 res.json(related)
 
 }
+
+exports.prdouctsOnCategory=async(req,res)=>{
+  const {type,id}=req.body
+  if(type==="category"){
+    Product.find({category:id},(err,docs)=>{
+      if(!err){
+        res.json(docs)
+      }else{
+        res.status(400).send(err.message)
+      }
+    })
+  }else{
+    Product.find({subcategory:id},(err,docs)=>{
+      if(!err){
+        res.json(docs)
+      }else{
+        res.status(400).send(err.message)
+      }
+    })
+  }
+}

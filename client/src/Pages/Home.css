@@ -1,54 +1,58 @@
-.banner {
-    font-family: 'Merriweather Sans', sans-serif;
-    font-size: 4.5vw;
-    text-align: center;
-    background-color: black;
-    color: white;
-    opacity: 0.9;
-    padding: 5vh 0;
-}
-
-.heading-1,
-.heading-2 {
-    padding: 20px 0;
-    font-family: 'Merriweather Sans', sans-serif;
-}
-
-.heading-1 {
-    margin-top: 50px;
-}
-
-.circularprogress {
-    padding-top: 200px;
-    display: block;
-    margin: auto;
-}
-
-.MuiCircularProgress-root {
-    display: block !important;
-    margin: auto;
-}
-
-.home-pagination {
-    display: block;
-    margin: auto;
-    transform: translateY(-3.5vh);
-}
-
-@media only screen and (max-width:1200px) {
-    .banner {
-        font-size: 1.7rem;
-    }
-    .heading-1,
-    .heading-2 {
-        font-size: 1.5rem;
-    }
-}
-
-.heading-underline {
-    background-color: black;
-    border-radius: 5px;
-    width: 20%;
-    height: 2px;
-    margin: 10px auto 70px;
-}
+        .home-body {
+            background: linear-gradient(217deg, #e6e6e6, #dddfd4 70.71%), linear-gradient(127deg, #3fb0ac, #dddfd4 70.71%), linear-gradient(336deg, #e6e6e6, #173e43 70.71%);
+        }
+        
+        .banner {
+            font-family: 'Merriweather Sans', sans-serif;
+            font-size: 4.5vw;
+            text-align: center;
+            background-image: linear-gradient(to right, #29313b, #3a4453, #9096a0);
+            color: white;
+            opacity: 0.9;
+            padding: 5vh 0;
+        }
+        
+        .heading-1,
+        .heading-2 {
+            padding: 20px 0;
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+        
+        .heading-1 {
+            padding-top: 50px;
+        }
+        
+        .circularprogress {
+            padding-top: 200px;
+            display: block;
+            margin: auto;
+        }
+        
+        .MuiCircularProgress-root {
+            display: block !important;
+            margin: auto;
+        }
+        
+        .home-pagination {
+            display: block;
+            margin: auto;
+            transform: translateY(-3.5vh);
+        }
+        
+        @media only screen and (max-width:1200px) {
+            .banner {
+                font-size: 1.7rem;
+            }
+            .heading-1,
+            .heading-2 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        .heading-underline {
+            background-color: black;
+            border-radius: 5px;
+            width: 20%;
+            height: 2px;
+            margin: 10px auto 70px;
+        }

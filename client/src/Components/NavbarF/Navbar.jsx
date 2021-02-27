@@ -8,7 +8,7 @@ import "./Navbar.css"
 function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <nav className="navbar navbar-expand-lg navbar-dark ">
         <a className="navbar-brand navbar-myicon" href="/">
           Adiat
         </a>

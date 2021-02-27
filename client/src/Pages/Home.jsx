@@ -35,6 +35,7 @@ const Home = () => {
         </div>
       ) : (
         <>
+          <div className="home-body">
         <HomeBanner/>
           <h1 className="heading-1 text-center">
             New Arrivals!
@@ -47,6 +48,7 @@ const Home = () => {
               <FlagshipProducts />
               <hr className="heading-underline"/>
               <AllProducts/>
+              </div>
         </>
       )}
     </>

@@ -63,6 +63,22 @@ export const relatedProduct=async(productId)=>{
     return await axios.get(`${process.env.REACT_APP_BACKEND_API_DOMAIN}/product/related/${productId}`)
 }
 
+export const categoryBasedProducts=async(category)=>{
+    return await axios.post(`${process.env.REACT_APP_BACKEND_API_DOMAIN}/product/category`,
+    {
+        type:"category",
+        id:category
+    }
+    )
+}
+
+
+export const subsBasedProducts=async(subcategory)=>{
+    return await axios.post(`${process.env.REACT_APP_BACKEND_API_DOMAIN}/product/category`,{
+        type:"subcategory",id:subcategory
+    })
+}
+
 
 
 
