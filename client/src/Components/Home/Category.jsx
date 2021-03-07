@@ -8,7 +8,7 @@ const Category = () => {
     const params=useParams()
     useEffect(()=>{
         categoryBasedProducts(params.id).then(res=>setProducts(res.data)).catch(err=>console.log(err))
-    },[])
+    },[params])
   
     return (
         <>

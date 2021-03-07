@@ -32,22 +32,22 @@ const Category = () => {
       const match = subs.filter((s) => s.category === c._id);
       return (
         <>
-          <li  className="dropdown-submenu" >
+          <div  className="dropdown-submenu" >
             <a id={c._id} className="dropdown-item" tabIndex="-1" onClick={handleCategory} href="#">{c.name}</a>
             <ul className="dropdown-menu">
-              {match.map((m) =>{
+              {match.map((m,index) =>{
                 return (
-                  <li >
-                   <a  id={m._id} onClick={handleSubs} href="#" className="dropdown-item"> {m.name}</a>
+                <li key={index}>
+                   <a  id={m._id} onClick={handleSubs} href="#" className="dropdown-item" key={index}> {m.name}</a>
                   </li>
                 );
               })}
             </ul>
-          </li>
+          </div>
         </>
       );
     }
-    return <li ><a id={c._id} className="dropdown-item" onClick={handleCategory} href="#">{c.name}</a></li>
+    return <a id={c._id} key="No-child" className="dropdown-item" onClick={handleCategory} href="#">{c.name}</a>
   };
 
 
@@ -63,11 +63,12 @@ const Category = () => {
     const cat=subs.filter(c=>c._id===e.target.id)
     console.log(cat)
     history.push(`/subcategory/${e.target.id}/${cat[0].name}`)
+    window.location.reload()
   }
 
   return (
     <li className="nav-item active ">
-      <a className="nav-link navbar-myicon" href="/">
+      <div className="nav-link navbar-myicon" href="#">
         <div className="dropdown">
           <button
             className="btn dropdown-toggle p-0 border-0"
@@ -90,7 +91,7 @@ const Category = () => {
               })}
           </div>
         </div>
-      </a>
+      </div>
     </li>
   );
 };

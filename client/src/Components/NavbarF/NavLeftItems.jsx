@@ -2,26 +2,13 @@ import React from "react";
 import HomeIcon from "@material-ui/icons/Home";
 import Category from "./Category";
 import DashboardIcon from '@material-ui/icons/Dashboard';
-// import { getCategories } from "../../../functions/CategoryApi";
-// import { getSubs } from "../../../functions/SubCategory";
-import {useSelector} from "react-redux"
+import {useHistory} from 'react-router-dom'
 
+import {useSelector} from "react-redux"
 const NavLeftItems =() =>{
 
     const {user}=useSelector((state)=>({...state}))
 
-    // const loadcategory = () => {
-    //   getCategories().then((res) => {
-    //     setValues();
-    //   });
-    // };
-  
-    // const loadSubcategory = () => {
-    //   getSubs().then((res) => {
-    //     setValues();
-    //   });
-    // };
-    
     return (
       <ul className="navbar-nav mr-auto">
         <li className="nav-item active">
